@@ -2,11 +2,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-from config.base import DATABASES
+from ..config.config import Config
 
 # Create engines
-default_engine = create_engine(DATABASES["default"])
-knowledge_base_engine = create_engine(DATABASES["knowledge_base"])
+default_engine = create_engine(Config.SQLITE_DATABASE_PATH)
+knowledge_base_engine = create_engine(Config.DUCKDB_DATABASE_PATH)
 
 # Create session makers
 DefaultSession = sessionmaker(bind=default_engine)
