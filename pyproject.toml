@@ -7,6 +7,9 @@ authors = [
 ]
 dependencies = [
     "python-dotenv>=1.0.1",
+    "python-telegram-bot>=21.4",
+    "sqlalchemy>=2.0.31",
+    "logging>=0.4.9.6",
 ]
 requires-python = "==3.10.*"
 readme = "README.md"
