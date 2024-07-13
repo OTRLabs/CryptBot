@@ -5,7 +5,9 @@ description = "Default template for PDM package"
 authors = [
     {name = "cam", email = "cammclain@skiff.com"},
 ]
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.0.1",
+]
 requires-python = "==3.10.*"
 readme = "README.md"
 license = {text = "apache-2.0"}
