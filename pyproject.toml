@@ -1,0 +1,15 @@
+[project]
+name = "CryptBot"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "cam", email = "cammclain@skiff.com"},
+]
+dependencies = []
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "apache-2.0"}
+
+
+[tool.pdm]
+distribution = false
