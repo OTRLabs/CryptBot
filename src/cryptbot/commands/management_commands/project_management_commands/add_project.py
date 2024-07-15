@@ -7,15 +7,19 @@ async def add_project_help(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     await update.message.reply_text("P")
 
 
+async def ask_user_for_scope_file(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    pass
+
 async def ask_user_for_project_name(update: Update, context: ContextTypes.DEFAULT_TYPE) -> str:
     """
     A function that is called when the user sends the /add_project command.
     It asks the user to enter a project name, and creates it in the database.
     """
-    text = "What would you like to name your project?\n\nPlease reply with your project name:"
 
-    await update.callback_query.message.reply_text(text)
-    
+    # Ask the user to enter a project name
+    # by sending a message to the user
+    # containing the text "Enter a project name:"
+    await update.message.reply_text("Enter a project name:")
 
 
 async def add_project(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -24,10 +28,7 @@ async def add_project(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     It asks the user to enter a project name, and creates it in the database.
     """
     
-    # Ask the user to enter a project name
-    # by sending a message to the user
-    # containing the text "Enter a project name:"
-    await update.message.reply_text("Enter a project name:")
+
 
     # Save the project name in the database
     # by creating a new instance of the Project model
@@ -41,3 +42,4 @@ async def add_project(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     await update.message.reply_text(f"Project {project_name} Created")
     
     
+
