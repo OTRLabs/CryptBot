@@ -1,0 +1,10 @@
+ollama
+python-telegram-bot
+outlines
+transformers
+torch
+tensorflow
+torchtext
+docker
+litestar
+sqlalchemy
